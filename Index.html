@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite: Samira & José Ivan</title>
+    <style>
+        :root {
+            --gold: #b8924e;
+            --soft-bg: #fffcf9;
+            --text: #4a4a4a;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--soft-bg);
+            color: var(--text);
+            text-align: center;
+        }
+
+        .container {
+            padding: 25px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .foto-topo {
+            width: 100%;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 2.1rem;
+            color: var(--gold);
+            margin-bottom: 0;
+        }
+
+        .data {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            color: #888;
+            margin-top: 25px; 
+            margin-bottom: 30px;
+        }
+
+        h3 { 
+            font-size: 1.1rem; 
+            font-style: italic; 
+            font-weight: normal; 
+            margin-top: 20px; 
+            padding: 0 15px;
+            line-height: 1.4;
+        }
+
+        h5 { 
+            font-weight: normal; 
+            margin-top: 8px; 
+            color: #777; 
+            margin-bottom: 30px;
+        }
+
+        .botoes-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            padding: 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            border: none;
+            display: block;
+        }
+
+        .btn-confirmar {
+            background-color: var(--gold);
+            color: white;
+            box-shadow: 0 4px 15px rgba(184, 146, 78, 0.3);
+        }
+
+        .btn-Lista {
+            background-color: white;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+        }
+
+        .endereco-box {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fcf4e9;
+            border-radius: 25px;
+            border: 1px dashed var(--gold);
+        }
+
+        .endereco-box h4 {
+            margin: 0 0 10px 0;
+            color: var(--gold);
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .endereco-texto {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+            margin: 0;
+        }
+
+        footer {
+            margin: 50px 0 30px 0;
+            font-size: 0.85rem;
+            color: var(--gold);
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="Casal.png" alt="Samira e José Ivan" class="foto-topo">
+
+        <h1>Samira & José Ivan</h1>
+        <div class="data">16 . Maio . 2026</div>
+        
+        <h3>"O amor é paciente, é bondoso... Tudo sofre, tudo crê, tudo espera, tudo suporta."</h3>
+        <h5>1 Coríntios 13:4, 7-8</h5>
+
+        <div class="botoes-container">
+            <a href="https://api.whatsapp.com/send?phone=5599992242663&text=Olá!%20Agradecemos%20o%20convite%20e%20confirmamos%20nossa%20presença,%20estamos%20ansiosos.%20(Seu%20nome%20aqui)" 
+               target="_blank" 
+               class="btn btn-confirmar">
+               Confirmar Presença
+            </a>
+
+            <a href="Lista.html" class="btn btn-Lista">
+               Lista de Presentes
+            </a>
+        </div>
+
+        <div class="endereco-box">
+            <h4>Local da Celebração</h4>
+            <p class="endereco-texto">
+                <strong>Xenofonte Eventos</strong><br>
+                Rua Floriano Peixoto, nº 30, Bairro São Félix<br>
+                (Entre a rua 16 e a 17)
+            </p>
+        </div>
+
+        <footer>
+            Com amor, Samira e Ivan
+        </footer>
+    </div>
+
+</body>
+</html>

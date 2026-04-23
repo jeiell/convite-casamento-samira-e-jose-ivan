@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Presentes - Samira & Ivan</title>
+    <style>
+        :root {
+            --gold: #b8924e;
+            --soft-bg: #fffcf9;
+            --text: #4a4a4a;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--soft-bg);
+            color: var(--text);
+            text-align: center;
+        }
+
+        .header {
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+            color: var(--gold);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .instrucao {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+
+        /* Corrigido o nome da classe grid */
+        .lista-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            padding: 0 20px 40px 20px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .item-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border: 1px solid #f0e6d6;
+        }
+
+        .item-nome {
+            font-weight: bold;
+            font-size: 1rem;
+            text-align: left;
+            color: #555;
+            padding-right: 10px;
+        }
+
+        .btn-presentear {
+            background-color: var(--gold);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .btn-voltar {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            padding: 30px;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="index.html" class="btn-voltar">← Voltar ao Convite</a>
+        <h1>Lista de Presentes</h1>
+        <p class="instrucao">Se desejar nos presentear, escolha um item abaixo e nos avise clicando no botão.</p>
+    </div>
+
+    <div class="lista-grid" id="listaItens"></div>
+
+    <footer>
+        Com carinho, Samira & José Ivan
+    </footer>
+
+    <script>
+        const itens = [
+            "Jogos de copos grande", "Jogo de copo pequeno", "Faqueiro", "Pratos", 
+            "Jogo de xícaras", "Panelas", "Panela de pressão", "Travessa", 
+            "Jarra", "Jogo de lençol", "Toalhas de banho", "Toalhas de rosto", 
+            "Cobertor", "Travesseiros", "Tapetes", "Panos de prato", 
+            "Toalhas de mesa", "Cortinas", "Garrafa térmica", "Colher de servir", 
+            "Boleira", "Tigela de plástico", "Ventilador"
+        ];
+
+        const Container = document.getElementById('listaItens');
+        const meuWhatsapp = "5599992242663";
+
+        itens.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'item-card';
+            
+            const mensagem = encodeURIComponent(`Olá! Gostaria de presentear Samira e José Ivan com: ${item}.`);
+            const linkZap = `https://api.whatsapp.com/send?phone=${meuWhatsapp}&text=${mensagem}`;
+
+            card.innerHTML = `
+                <span class="item-nome">${item}</span>
+                <a href="${linkZap}" target="_blank" class="btn-presentear">Presentear</a>
+            `;
+            Container.appendChild(card);
+        });
+    </script>
+
+</body>
+</html>
