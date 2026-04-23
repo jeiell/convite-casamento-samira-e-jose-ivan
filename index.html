@@ -3,80 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite de Casamento - Samira & José Ivan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <title>Convite: Samira & José Ivan</title>
     <style>
-        body { font-family: 'Montserrat', sans-serif; background-color: #fdf8f5; color: #5a4a42; margin: 0; text-align: center; scroll-behavior: smooth; }
-        .container { padding: 40px 20px; max-width: 600px; margin: auto; }
-        .foto-topo { width: 100%; max-width: 400px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
-        h1 { font-family: 'Dancing Script', cursive; font-size: 3rem; color: #8d6e63; margin: 10px 0; }
-        .data { font-size: 1.2rem; font-weight: bold; margin: 20px 0; border-top: 1px solid #d7ccc8; border-bottom: 1px solid #d7ccc8; padding: 10px 0; }
-        .btn { display: inline-block; background-color: #8d6e63; color: white; padding: 15px 30px; text-decoration: none; border-radius: 30px; margin: 10px 5px; font-weight: bold; transition: 0.3s; border: none; cursor: pointer; font-size: 1rem; }
-        .section-lista { background-color: #fff; padding: 40px 20px; margin-top: 50px; border-top: 2px solid #f3e5f5; }
-        .item-presente { background: #fdf8f5; padding: 15px; margin: 10px 0; border-radius: 10px; border-left: 5px solid #8d6e63; text-align: left; display: flex; justify-content: space-between; align-items: center; }
-        footer { margin-top: 50px; padding: 20px; font-size: 0.8rem; color: #a1887f; }
-        /* Botão de Música */
-        #btnMusica { position: fixed; top: 20px; right: 20px; z-index: 1000; background: rgba(255,255,255,0.9); border: 1px solid #8d6e63; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; font-size: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        :root {
+            --gold: #b8924e;
+            --soft-bg: #fffcf9;
+            --text: #4a4a4a;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--soft-bg);
+            color: var(--text);
+            text-align: center;
+        }
+
+        .container {
+            padding: 25px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .foto-topo {
+            width: 100%;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Georgia', serif;
+            font-size: 2.1rem;
+            color: var(--gold);
+            margin-bottom: 0;
+        }
+
+        .data {
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            color: #888;
+            margin-top: 25px; 
+            margin-bottom: 30px;
+        }
+
+        h3 { 
+            font-size: 1.1rem; 
+            font-style: italic; 
+            font-weight: normal; 
+            margin-top: 20px; 
+            padding: 0 15px;
+            line-height: 1.4;
+        }
+
+        h5 { 
+            font-weight: normal; 
+            margin-top: 8px; 
+            color: #777; 
+            margin-bottom: 30px;
+        }
+
+        .botoes-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            padding: 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            border: none;
+            display: block;
+        }
+
+        .btn-confirmar {
+            background-color: var(--gold);
+            color: white;
+            box-shadow: 0 4px 15px rgba(184, 146, 78, 0.3);
+        }
+
+        .btn-Lista {
+            background-color: white;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+        }
+
+        .endereco-box {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fcf4e9;
+            border-radius: 25px;
+            border: 1px dashed var(--gold);
+        }
+
+        .endereco-box h4 {
+            margin: 0 0 10px 0;
+            color: var(--gold);
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        .endereco-texto {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #555;
+            margin: 0;
+        }
+
+        footer {
+            margin: 50px 0 30px 0;
+            font-size: 0.85rem;
+            color: var(--gold);
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
 
-    <audio id="musicaConvite" loop>
-        <source src="musica.mp3" type="audio/mpeg">
-    </audio>
-    <button id="btnMusica" onclick="toggleMusica()">🎵</button>
-
     <div class="container">
         <img src="Casal.png" alt="Samira e José Ivan" class="foto-topo">
-        <p>Com a bênção de Deus e de nossos pais,</p>
+
         <h1>Samira & José Ivan</h1>
-        <p>Convidam para a celebração de seu casamento</p>
+        <div class="data">16 . Maio . 2026</div>
         
-        <div class="data">20 de Junho de 2026 | 19:30h</div>
-        
-        <p>Local: Chácara Recanto da Natureza</p>
-        
-        <a href="https://wa.me/5599999999999?text=Confirmo+minha+presença+no+casamento" class="btn">Confirmar Presença</a>
-        <a href="#lista" class="btn" style="background-color: #a1887f;">Visualizar Lista de Presentes</a>
+        <h3>"O amor é paciente, é bondoso... Tudo sofre, tudo crê, tudo espera, tudo suporta."</h3>
+        <h5>1 Coríntios 13:4, 7-8</h5>
+
+        <div class="botoes-container">
+            <a href="https://api.whatsapp.com/send?phone=5599992242663&text=Olá!%20Agradecemos%20o%20convite%20e%20confirmamos%20nossa%20presença,%20estamos%20ansiosos.%20(Seu%20nome%20aqui)" 
+               target="_blank" 
+               class="btn btn-confirmar">
+               Confirmar Presença
+            </a>
+
+            <a href="Lista.html" class="btn btn-Lista">
+               Lista de Presentes
+            </a>
+        </div>
+
+        <div class="endereco-box">
+            <h4>Local da Celebração</h4>
+            <p class="endereco-texto">
+                <strong>Xenofonte Eventos</strong><br>
+                Rua Floriano Peixoto, nº 30, Bairro São Félix<br>
+                (Entre a rua 16 e a 17)
+            </p>
+        </div>
+
+        <footer>
+            Feito por: Natanael Teixeira
+        </footer>
     </div>
 
-    <div id="lista" class="section-lista">
-        <h2>Lista de Presentes</h2>
-        <p>Sua presença é o nosso maior presente, mas se desejar nos agraciar, aqui estão algumas sugestões:</p>
-        
-        <div class="item-presente">
-            <span>Jogo de Jantar - R$ 250</span>
-            <a href="https://wa.me/5599999999999?text=Olá!+Gostaria+de+presentear+com+o+Jogo+de+Jantar" class="btn">Presentear</a>
-        </div>
-        <div class="item-presente">
-            <span>Fritadeira Air Fryer - R$ 400</span>
-            <a href="https://wa.me/5599999999999?text=Olá!+Gostaria+de+presentear+com+a+Air+Fryer" class="btn">Presentear</a>
-        </div>
-        <div class="item-presente">
-            <span>Contribuição Lua de Mel (Qualquer Valor)</span>
-            <a href="https://wa.me/5599999999999?text=Olá!+Quero+contribuir+com+o+Pix+da+Lua+de+Mel" class="btn">Presentear</a>
-        </div>
-
-        <a href="#" class="btn" style="margin-top: 30px; background: none; color: #8d6e63; border: 1px solid #8d6e63;">Voltar ao Topo</a>
-    </div>
-
-    <footer>
-        <p>Feito com ❤️ por: Natanael Teixeira</p>
-    </footer>
-
-    <script>
-        const musica = document.getElementById('musicaConvite');
-        const btn = document.getElementById('btnMusica');
-
-        function toggleMusica() {
-            if (musica.paused) {
-                musica.play();
-                btn.innerHTML = '⏸️';
-            } else {
-                musica.pause();
-                btn.innerHTML = '🎵';
-            }
-        }
-    </script>
 </body>
 </html>
