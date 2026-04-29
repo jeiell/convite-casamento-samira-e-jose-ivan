@@ -31,6 +31,8 @@
             border-radius: 25px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             margin-bottom: 20px;
+            /* Garante que a imagem mantenha a proporção */
+            object-fit: cover;
         }
 
         h1 {
@@ -95,6 +97,11 @@
             border: 1px solid var(--gold);
         }
 
+        .btn:active {
+            transform: scale(0.98);
+            opacity: 0.9;
+        }
+
         .endereco-box {
             margin-top: 40px;
             padding: 20px;
@@ -131,8 +138,7 @@
         <img src="Casal.png" alt="Samira e José Ivan" class="foto-topo">
 
         <h1>Samira & José Ivan</h1>
-        <div class="data">16 . Maio . 2026 - 
-            Às 19h30</div>
+        <div class="data">16 . Maio . 2026</div>
         
         <h3>"O amor é paciente, é bondoso... Tudo sofre, tudo crê, tudo espera, tudo suporta."</h3>
         <h5>1 Coríntios 13:4, 7-8</h5>
@@ -144,7 +150,7 @@
                Confirmar Presença
             </a>
 
-            <a href="lista.html" class="btn btn-Lista">
+            <a href="Lista.html" class="btn btn-Lista">
                Lista de Presentes
             </a>
         </div>
@@ -153,8 +159,7 @@
             <h4>Local da Celebração</h4>
             <p class="endereco-texto">
                 <strong>Xenofonte Eventos</strong><br>
-                Rua Floriano Peixoto, nº 30, <br>
-                Bairro São Félix<br>
+                Rua Floriano Peixoto, nº 30, Bairro São Félix<br>
                 (Entre a rua 16 e a 17)
             </p>
         </div>
@@ -166,5 +171,6 @@
 
 </body>
 </html>
+
 
 
