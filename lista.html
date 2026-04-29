@@ -10,7 +10,7 @@
             --soft-bg: #fffcf9;
             --text: #4a4a4a;
             --white: #ffffff;
-            --disabled: #cccccc; /* Cor para botão inativo */
+            --disabled: #cccccc;
         }
 
         body {
@@ -73,7 +73,7 @@
             color: white;
             padding: 10px 18px;
             border-radius: 15px;
-            border: none; /* Removido borda do botão */
+            border: none;
             font-size: 0.8rem;
             font-weight: bold;
             text-transform: uppercase;
@@ -81,7 +81,6 @@
             transition: 0.3s;
         }
 
-        /* Estilo para quando o botão estiver desativado */
         .btn-presentear:disabled {
             background-color: var(--disabled);
             cursor: not-allowed;
@@ -131,11 +130,9 @@
         const meuWhatsapp = "5599992242663";
 
         function presentear(botao, item) {
-            // Desativa o botão e muda o texto
             botao.disabled = true;
             botao.innerText = "Escolhido";
             
-            // Cria a mensagem e abre o WhatsApp
             const mensagem = encodeURIComponent(`Olá! Gostaria de presentear Samira e José Ivan com: ${item}.`);
             const linkZap = `https://api.whatsapp.com/send?phone=${meuWhatsapp}&text=${mensagem}`;
             
